@@ -64,12 +64,16 @@ label.error{
 }
 
 .order-image-wrap{
-  width: 130px;
+  width: 99px;
 }
 
 /* Order section style */
 .order-list{
   display: none;
+}
+
+.order-list tr td{
+  font-size: 13px;
 }
 
 .button-wrap{
@@ -119,6 +123,11 @@ label.error{
 #buktiFoto{
   top: 20%;
   /*margin-top: -155px;*/
+}
+
+#buktiFoto .modal-dialog{
+  max-width: 480px;
+  width: 100%;
 }
 
 #buktiFoto .modal-body{
