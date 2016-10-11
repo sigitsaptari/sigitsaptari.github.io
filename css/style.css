@@ -239,11 +239,18 @@ label.error{
 }
 
 
-/* media query */
+/* media query style for smartphone, tablet*/
 
 @media screen and (max-width: 320px){
   .succes-icon{
     top: 46px;
+  }
+}
+
+@media screen and (max-width: 4800px){
+  #buktiFoto .modal-dialog {
+    max-width: inherit;
+    width: auto;
   }
 }
 
