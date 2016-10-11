@@ -34,17 +34,19 @@
                 <legend>Data Sista</legend>
                 <div class="form-group">
                   <label for="name-input"><em class="pull-right">*</em>Nama Sista</label>
-                  <input type="text" class="form-control" id="name-input" name="nameInput" placeholder="Nama Sista">
+                  <input type="text" class="form-control" id="name-input" name="nameInput" placeholder="Dian Sastro atau dengan nama Sista">
                 </div>
 
                 <div class="form-group">
-                  <label for="email-input">Email Sista</label>
-                  <input type="email" class="form-control" id="email-input" placeholder="Email Sista">
+                  <label for="email-input"><em class="pull-right">*</em>Email Sista</label>
+                  <input type="email" class="form-control" id="email-input" placeholder="john@gmail.com" name="emailInput">
+                  <em class="small-notif">Pemberitahuan retur barang nanti akan di kirim ke email Sista</em>
                 </div>
 
                 <div class="form-group">
-                  <label for="phone-input">Handphone Sista</label>
-                  <input type="text" class="form-control" id="phone-input" placeholder="Handphone Sista">
+                  <label for="phone-input"><em class="pull-right">*</em>Handphone Sista</label>
+                  <input type="text" class="form-control" id="phone-input" placeholder="081234567890" name="phoneInput">
+                  <em class="small-notif">Pemberitahuan retur barang nanti akan di kirim ke no handphone Sista</em>
                 </div>
               </fieldset>
             </div>
@@ -124,7 +126,7 @@
                 <div class="return-cost">
                   <div class="form-group">
                     <label>Biaya Kirim Balik</label>
-                    <input type="text" class="form-control" placeholder="Nominal Biaya Kirim balik">
+                    <input type="text" class="form-control" placeholder="200.000" name="sendBack">
                   </div>
 
                   <div class="return-image">
@@ -133,12 +135,25 @@
 
                   <div class="form-group">
                     <label>Keterangan</label>
-                    <!-- <input type="number" class="form-control" placeholder="Nominal Biaya Kirim balik"> -->
                     <textarea class="form-control"></textarea>
                   </div>
 
-                  <div class="button-wrap get-voucher">
-                    <button type="submit" class="btn">Get Voucher</button>
+                  <div class="get-voucher-wrap">
+                    <div class="button-wrap get-voucher text-center">
+                      <em>Selamat, kamu berhak mendapatkan voucher sebesar Rp.300.000 </em>
+                      <button type="button" class="btn get-vouchet-btn">Get Voucher</button>
+                      <div class="succes-icon">
+                        <svg>
+                          <polyline points="15,30 25,45 55,20"/>
+                        </svg>
+                      </div>
+                    </div>
+
+                    <div class="email-voucher">
+                      <div class="form-group">
+                        <input type="text" class="form-control" id="email-voucher" placeholder="john@gmail.com" name="getVoucher">
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <hr>
@@ -153,11 +168,8 @@
             <div class="modal fade" id="buktiFoto" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
               <div class="modal-dialog" role="document">
                 <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <!-- <h4 class="modal-title" id="myModalLabel">Modal title</h4> -->
-                  </div>
                   <div class="modal-body">
+                    <button type="button" class="close close-photo" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                     <img class="img-responsive" src="http://placehold.it/480x250">
                   </div>
                 </div>
@@ -197,12 +209,32 @@
                 noOrder: {
                   required: true,
                   number: true
+                },
+                sendBack: {
+                  required: true,
+                  number: true
+                },
+                emailInput: {
+                  required: true,
+                  email: true
+                },
+                getVoucher: {
+                  required: true,
+                  email: true
+                },
+                phoneInput: {
+                  required: true,
+                  maxlength: 13,
                 }
             },
 
             // Specify the validation error messages
             messages: {
                 nameInput: "Nama Sista wajib diisi",
+                emailInput: "Email Sista wajib diisi",
+                getVoucher: "Email Sista wajib diisi",
+                phoneInput: "Nomor Handphone Sista wajib diisi",
+                sendBack: "Nominal biaya kirim balik wajib diisi",
                 noOrder: "Nomor Order wajib diisi"
             },
 
@@ -210,6 +242,12 @@
                 form.submit();
                 return false;
             }
+        });
+
+        $('.get-vouchet-btn').click(function() {
+          $('.succes-icon polyline').show().css('-webkit-animation-play-state', 'running');
+          $('.succes-icon').css('z-index', '2');
+          $('.email-voucher').slideDown();
         });
       });
     </script>
