@@ -251,7 +251,7 @@ label.error{
   }
 }
 
-@media screen and (max-width: 4800px){
+@media screen and (max-width: 480px){
   #buktiFoto .modal-dialog {
     max-width: inherit;
     width: auto;
