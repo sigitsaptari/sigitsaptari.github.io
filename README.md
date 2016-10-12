@@ -1,6 +1,6 @@
 # Online Retur Page
 
-You can test a fully working live demo at <a href="sigitsaptari.github.io" target="_blank">sigitsaptari.github.io</a>
+You can test a fully working live demo at <a href="https://sigitsaptari.github.io/" target="_blank">sigitsaptari.github.io</a>
 
 ## Description
 In here I will describe what I've done on this Assessment.
@@ -20,7 +20,7 @@ In here I will describe what I've done on this Assessment.
 - The "Keterangan" text area field I made it become lower height to make user low expectation that the text area box should inputed longer, because if the "Keterangan" text area field have high height the user will have expectation that box should inputed longer and make her lazy to input on it.
 
 
-### Order Section
+### Voucher Section
 - Because the bank section has been removed I've added the voucher section with the button and caption "Get Voucher" inside, also I've added the notice "Selamat, kamu berhak mendapatkan voucher sebesar Rp.300.000" that will indicates the sista get voucher based on price of the product.
 - If the Sista want to claim the voucher, She must click the get voucher button and input the Sista email so the voucher will be send to her email.
 
