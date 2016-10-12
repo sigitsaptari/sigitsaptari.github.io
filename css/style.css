@@ -2,12 +2,17 @@
 
 body{
   font-family: 'Lato', Arial;
+  background: #f9f9f9;
 }
 
 .main-wrap{
+  background: #fff;
   padding: 10px;
   max-width: 480px;
-  margin: 0 auto;
+  margin: 20px auto;
+  border: 1px solid #efefef;
+  box-shadow: 0px 0px 1px #f3f3f3;
+  border-radius: 3px;
 }
 
 .main-wrap legend{
